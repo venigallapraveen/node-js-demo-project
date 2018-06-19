@@ -52,6 +52,14 @@ app.get('/',(req,res)=> {
 });
 
 
+app.get('/projects',(req,res)=> {
+    //res.send('About page');
+
+    res.render('projects.hbs',{
+        pageTitle : 'projects page'
+    });
+});
+
 
 
 app.get('/about',(req,res)=> {
@@ -61,6 +69,8 @@ app.get('/about',(req,res)=> {
         pageTitle : 'about page'
     });
 });
+
+
 
 app.listen(port),()=>{
     console.log(`server is up on port : ${port}`);
